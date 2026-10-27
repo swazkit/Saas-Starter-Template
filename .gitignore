@@ -1,6 +1,4 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# Dependencies
 /node_modules
 /.pnp
 .pnp.*
@@ -10,32 +8,79 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
+# Testing & Coverage
 /coverage
+*.lcov
+.nyc_output
 
-# next.js
+# Next.js build output
 /.next/
 /out/
-
-# production
 /build
+/dist
 
-# misc
+# Turbo & Cache
+.turbo
+.cache
+
+# Operating System & Misc
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
 *.pem
+*.key
+*.crt
 
-# debug
+# Debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+lerna-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# Environment variable files
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+!.env.example
+!.env.template
 
-# vercel
+# Prisma generated client & local databases
+/app/generated/prisma
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Vercel deployment
 .vercel
 
-# typescript
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDEs & Editors
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# AI Editors & Assistant local caches
+.claude/
+.windsurf/
+.cursor/
+.gemini/
